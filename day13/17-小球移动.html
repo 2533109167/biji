@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            height: 600px;
+            border-bottom: 1px solid #000;
+            position: relative;
+        }
+        .father div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .father div:nth-child(1) {
+            width: 30px;
+            height: 30px;
+            background-image: linear-gradient(red, blue);
+            animation-name: ball1;
+            animation-duration: 3s;
+           
+        }
+        .father div:nth-child(2) {
+            width: 50px;
+            height: 50px;
+            background-image: radial-gradient(closest-side ,gold, pink);
+            animation-name: ball2;
+            animation-duration: 4s;
+           
+        }
+        .father div:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            background: url("./img/6.jpg");
+            background-size: cover;
+            animation-name: ball3;
+            animation-duration: 2s;
+          
+         
+        }
+        .father div:nth-child(4) {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            animation-name: ball4;
+            animation-duration: 4s;
+           
+        }
+
+        @keyframes ball1 {
+            0% {
+                transform: translate(0);
+            }
+            50% {
+                transform: translate(300px, 400px);
+            }
+            100% {
+                transform: translate(700px, 100px);
+            }
+        }
+
+        @keyframes ball2 {
+            0% {
+                transform: translate(0);
+            }
+            70% {
+                transform: translate(400px, 550px);
+            }
+            100% {
+                transform: translate(700px, 500px);
+            }
+        }
+
+        @keyframes ball3 {
+            0% {
+                transform: translate(0);
+            }
+            50% {
+                transform: translate(800px, 400px);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        @keyframes ball4 {
+            50% {
+                transform: translate(500px, 500px);
+            }
+            100% {
+                transform: translate(800px, 300px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div></div>
+        <!-- <div></div>
+        <div></div>
+        <div></div> -->
+    </div>
+</body>
+</html>

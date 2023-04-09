@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        .yiji>li {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000;
+            float: left;
+            position: relative;
+        }
+        .erji {
+            background-color: pink;
+            position: absolute;
+            top: 100px;
+            left: 0;
+        }
+        .erji>li {
+            width: 300px;
+            height: 150px;
+            border: 1px solid blue;
+        }
+        
+
+        .erji {
+            height: 0;
+            overflow: hidden;
+            transition: 2s;
+        }
+        .yiji>li:hover .erji1 {
+            height: 152px;
+        }
+        .yiji>li:hover .erji2 {
+            height: 304px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="yiji">
+        <li>一级导航1
+            <ul class="erji erji1">
+                <li>二级导航1-1</li>
+            </ul>
+        </li>
+        <li>一级导航2
+            <ul class="erji erji2">
+                <li>二级导航2-1</li>
+                <li>二级导航2-2</li>
+            </ul>
+        </li>
+        <li>一级导航3
+            <ul class="erji">
+                <li>二级导航3-1</li>
+                <li>二级导航3-2</li>
+                <li>二级导航3-3</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

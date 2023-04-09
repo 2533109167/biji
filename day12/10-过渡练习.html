@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        ul {
+            border: 1px solid #ccc;
+            width: 1002px;
+        }
+        li {
+            float: left;
+            height: 40px;
+            width: 99px;
+            border-right: 1px dashed #ccc;
+            background: url("./img/360bg.png") no-repeat 0px -55px;
+            transition: 0.6s;
+        }
+        .clearfix:after {
+            content:"";
+            overflow: hidden;
+            clear: both;
+            height: 0;
+            visibility: hidden;
+            display: block;
+          
+        }
+        li a {
+            line-height: 40px;
+            color: #ccc;
+            padding-left: 30px;
+            transition: 0.5s;
+        }
+
+        li:hover {
+            /* background-position: ; */
+            background-position-y: -91px;
+        }
+        li:hover a {
+            color: #3faf0f;
+        }
+    </style>
+</head>
+<body>
+    <ul class="clearfix">
+        <li>
+            <a href="">我的首页</a>
+        </li>
+        <li>
+            <a href="">我的首页</a>
+        </li>
+        <li>
+            <a href="">我的首页</a>
+        </li>
+        <li>
+            <a href="">我的首页</a>
+        </li>
+        <li>
+            <a href="">我的首页</a>
+        </li>
+        <li>
+            <a href="">我的首页</a>
+        </li>
+        <li>
+            <a href="">我的首页</a>
+        </li>
+    </ul>
+</body>
+</html>

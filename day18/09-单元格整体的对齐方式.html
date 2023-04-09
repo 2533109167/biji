@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .father div:nth-child(1) {
+            background-color: yellow;
+        }
+        .father div:nth-child(2) {
+            background-color: green;
+        }
+        .father div:nth-child(3) {
+            background-color: cyan;
+        }
+        .father div:nth-child(4) {
+            background-color: pink;
+        }
+        .father div:nth-child(5) {
+            background-color: blue;
+        }
+        .father div:nth-child(6) {
+            background-color: peru;
+        }
+        .father div:nth-child(7) {
+            background-color: aliceblue;
+        }
+        .father div:nth-child(8) {
+            background-color: lime;
+        }
+        .father div:nth-child(9) {
+            background-color: green;
+        }
+        .father div:nth-child(10) {
+            background-color: hotpink;
+        }
+        .father {
+            width: 600px;
+            height: 600px;
+            border: 1px solid #000;
+            display: grid;
+            grid-template-rows: 200px 300px;
+            grid-template-columns: repeat(5, 100px);
+            /* justify-content: start;
+            justify-content: center;
+            justify-content: end;
+            justify-content: space-around;
+            justify-content: space-between;
+            justify-content: space-evenly; */
+            justify-content: space-evenly;
+            align-content: start;
+            align-content: center;
+            align-content: end;
+            align-content: space-around;
+            align-content: space-between;
+            align-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">1</div>
+        <div class="son">2</div>
+        <div class="son">3</div>
+        <div class="son">4</div>
+        <div class="son">5</div>
+        <div class="son">6</div>
+        <div class="son">7</div>
+        <div class="son">8</div>
+        <div class="son">9</div>
+        <div class="son">10</div>
+    </div>
+</body>
+</html>
+
+<!-- 
+    单元格整体的水平对齐方式
+    justify-content: start/end/center/stretch（默认）
+                     space-between
+                     space-around
+                     space-evenly
+
+    单元格整体的垂直对齐方式
+    align-content: start/end/center/stretch 默认
+                    space-between
+                    space-around
+                    space-evenly
+
+    单元格整体的对齐方式的简写
+    place-content: 水平 垂直
+ -->

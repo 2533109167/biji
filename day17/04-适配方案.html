@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 10vw;
+            /* height: 200px; */
+            height: 20vh;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+<!-- 
+    适配方案
+    1. rem + 媒体查询
+    根据不同的机型设置不同的html的font-size
+    2. rem + vw 适配
+
+    vw 视窗宽度的比例
+    1vw = 视窗宽度的1%
+
+    需要把html的font-size根据不同的屏幕宽度改成不同的数值，rem就会成比例进行变换
+    html的font-size和屏幕宽度成比例
+
+    已知屏幕宽度320px  
+    320px = 100vw     320px = 100x   1x= 3.2px 
+                      50px = (50/3.2)
+    50px = 15.625vw
+
+
+    =============
+    320px  50px = 15.625vw
+    375px   15.625vw = 58.59375px
+    414px   15.625vw = 64.6875px
+
+    3. flexable.js 插件
+        根据屏幕的宽度动态设置html的font-size
+
+        步骤
+        1. js文件中 第76行 var rem = width*50/320
+            把尺寸改成设计图的宽度
+        2. 引入js，把视口代码去掉
+ -->
+ <!-- 
+    边框1px
+
+    物理像素1px dpr = 2  逻辑像素 0.5
+
+    1. 渐变
+    2. 阴影
+    3. 元素+缩放 --- 推荐
+        高度1px的元素 transform: scaleY(0.5)
+    4. 调整页面的缩放比例 --- 推荐
+  -->
+  <!-- 
+    移动端布局方案
+    1. 弹性布局 百分比布局 -- 拉钩
+        图片和文字的大小不变， 位置随着容器进行变化
+    2. 等比例缩放
+        页面中所有内容都进行等比例的缩放
+    3. 混合布局
+        弹性布局+等比例缩放
+    4. 响应式
+        !响应式要想实现移动端布局，必须要加上视口
+-->
+<!-- 
+    移动端结构
+    - 头部固定，头部和主体不重叠
+        弹性盒
+        html,body {
+            height: 100%
+        }
+        body {
+            display: flex;
+            flex-direction: column
+        }
+        main {
+            flex:1:// 占据剩余空间
+            overflow: auto // 出现滚动条
+        }
+
+    - 头部固定， 头部和主体滚动的时候有重叠
+        头部固定定位    
+ -->

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type='text']:enabled {
+            background-color: pink;
+        }
+        input[type='text']:disabled{
+            background-color: yellow;
+        }
+
+        input[type='checkbox'] {
+            /* 去掉多选框自带样式 */
+            appearance: none;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            vertical-align: middle;
+        }
+        input[type='checkbox']:checked {
+            background: url("./img/bg.png");
+            /* 背景图大小 */
+            background-size: cover;
+            border: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>
+        <input type="text">
+        <input type="text" disabled>
+    </p>
+    <p>
+        <input type="checkbox">苹果
+        <input type="checkbox">香蕉
+    </p>
+</body>
+</html>
+<!-- 
+    UI状态伪类选择器
+    E:enabled 元素处于可用状态 --- 表单控件可用
+    E:disabled 元素处于禁用状态 --- 表单控件可用
+
+    E:checked 元素处于选中状态  单选 多选
+ -->

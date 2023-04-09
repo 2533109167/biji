@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 同级中的第二个元素，并且这个元素是li */
+        /* li:nth-child(2) {
+            background-color: pink;
+        } */
+
+        /* 同级中同类型的第2个，并且这个元素是li */
+        li:nth-of-type(2) {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>里面的li1</li>
+        <p>ppppppppppp</p>
+        <p>ppppppppppp</p>
+        <li>里面的li2</li>
+        <p>ppppppppppp</p>
+        <ul>
+            <p>pppppppppppp</p>
+            <li>最里面的li1</li>
+            <li>最里面的li2</li>
+        </ul>
+    </ul>
+    <li>外面的li1</li>
+    <li>外面的li2</li>
+</body>
+</html>

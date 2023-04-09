@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin: 50px auto;
+        }
+        .son {
+            width: 300px;
+            height: 200px;
+            background-color: cyan;
+            animation-name: move;
+            animation-name: move1;
+            animation-name: move1, bg;
+            animation-duration: 10s, 5s;
+
+            animation-delay: 3s;
+        }
+
+        @keyframes move {
+            from {
+                transform: translate(400px);
+                background-color: yellow;
+            }
+            to {
+                transform: translate(800px);
+                background-color: red;
+            }
+        }
+        @keyframes move1 {
+            0% {
+                transform: translate(300px);
+            }
+            30% {
+                transform: translate(600px);
+            }
+            50% {
+                transform: translate(600px, 600px);
+            }
+            100% {
+                transform: translate(300px, 600px);
+            }
+        }
+        @keyframes bg {
+            0% {
+                background-color: yellow;
+            }
+            50% {
+                background-color: green;
+            }
+            100% {
+                background-color: blue;
+            }
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>
+<!-- 
+    动画
+
+    定义关键帧
+    @keyframes 动画名字 {
+        from {}
+        to {}
+    }
+
+    @keyframes 动画名字 {
+        百分比是时间的百分比
+        0% {}
+        100% {}
+    }
+
+
+    绑定动画的属性
+    animation:
+                animation-name 绑定动画名字  必写
+                animation-duration 动画持续时间 s ms  必写
+                animation-delay 动画的延迟时间
+                animation-timing-function 动画的运动状态
+                                    linear
+                                    ease  默认
+                                    ease-in
+                                    ease-out
+                                    ease-in-out
+                                    贝塞尔
+                                    steps()
+                                    step-start
+                                    step-end
+
+                animation-iteration-count 动画的执行次数
+                                    1（默认） 2 3 4 
+                                    infinite 无数次
+
+                animation-direction  动画的方向
+                                     normal 正向 默认
+                                     reverse 反向
+                                     alternate 先正后反 （执行次数必须大于等于2次）
+                                     alternate-reverse  先反后正 （执行次数必须大于等于2次）
+
+                animation-fill-mode  动画时间之外的状态 （延迟时间，动画结束）
+                                     none 默认 
+                                     backwards  动画延迟时间停在第一帧
+                                     forwards  动画结束后停在最后一帧
+                                     both  backwards+forwards
+                                             动画延迟停在第一帧，动画结束后停在最后一帧
+
+                animation-play-state  动画的执行状态
+                                        * 不能放在简写中，一般配合hover使用
+                                        running 默认 运动
+                                        paused  暂停
+
+    动画简写
+    animation:
+            名字 持续时间 延迟时间  运动状态 次数  方向 时间之外的状态
+
+            !注意点
+            1. 持续时间和名字必须写
+            2. 持续时间和延迟时间有先后顺序， 持续时间在前
+            3. 时间必须写单位 0s也要写单位
+            4. 动画名字严格区分大小写，避免书写关键字
+
+
+ -->

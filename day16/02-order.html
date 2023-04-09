@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 700px;
+            height: 300px;
+            border: 1px solid #000;
+            display: flex;
+        }
+        .father div {
+            width: 100px;
+            height: 100px;
+            border: 3px dashed blue;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 100px;
+        }
+        .box3 {
+            order: 2;
+        }
+        .box6 {
+            order: 3;
+        }
+        .box5 {
+            order: -1;
+        }
+        span {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div>1</div>
+        <div>2</div>
+        <div class="box3">3</div>
+        <div>4</div>
+        <div class="box5">5</div>
+        <div class="box6">6</div>
+        <span>span</span>
+    </div>
+</body>
+</html>
+<!-- 
+    order: 项目的排列顺序
+            + -  数值越大，排列顺序越靠后
+            auto 默认
+
+    弹性盒子里面的子元素可以直接设置宽高
+ -->

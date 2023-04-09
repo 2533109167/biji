@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin: 100px auto;
+            position: relative;
+            /* perspective: 1000px; */
+            /* transform-style: preserve-3d; */
+            /* transform-origin: left center ; */
+        }
+        img {
+            transition: 1s;
+            /* position: relative;
+            top: 0px;
+            left: 0px; */
+            transform-origin: left center ;
+            transform: rotateY(180deg)
+        }
+        .father:hover img {
+            /* transform: rotateX(120deg); */
+            /* transform: rotateX(180deg); */
+            /* transform: rotateY(60deg); */
+            /* transform: rotateY(120deg); */
+            /* transform: rotateY(180deg); */
+        
+        }
+        .father1:hover img {
+            /* rotate3d 改变元素的轴 */
+            /* transform: rotate3d(1,1,0,90deg); */
+            /* transform: rotate3d(1,0.5,0,90deg); */
+            transform: rotateY(0deg);
+            /* rotatex rotatey分开写表示先后顺序 */
+            /* transform: rotateX(90deg) rotateY(90deg); */
+        }
+
+        .father2:hover img {
+            /* x y z 没有1的时候，小数被视为1 */
+            /* transform: rotate3d(0.5,0.5,0,90deg); */
+            /* 只有x y z其中一个变为1, 小数才能正确使用 */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="father father2">
+        <img src="./img/img001.jpg" alt="">
+    </div>
+    <div class="father father1">
+        <img src="./img/img001.jpg" alt="">
+    </div>
+    <div class="father">
+        <img src="./img/img001.jpg" alt="">
+    </div>
+</body>
+</html>

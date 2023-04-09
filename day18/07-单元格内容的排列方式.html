@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 600px;
+            height: 500px;
+            border: 3px solid #000;
+            margin: 100px auto;
+            display: grid;
+            grid-template-columns: 100px auto 100px;
+            grid-template-rows: 200px auto 200px;
+            /* justify-items: start; */
+            justify-items: center;
+            /* justify-items: end; */
+            /* justify-items: stretch; */
+            align-items: start;
+            /* align-items: center; */
+            /* align-items: end; */
+            /* align-items: stretch; */
+        }
+        .father div:nth-child(1) {
+            background-color: yellow;
+        }
+        .father div:nth-child(2) {
+            background-color: green;
+        }
+        .father div:nth-child(3) {
+            background-color: cyan;
+        }
+        .father div:nth-child(4) {
+            background-color: pink;
+        }
+        .father div:nth-child(5) {
+            background-color: blue;
+        }
+        .father div:nth-child(6) {
+            background-color: peru;
+        }
+        .father div:nth-child(7) {
+            background-color: aliceblue;
+        }
+        .father div:nth-child(8) {
+            background-color: lime;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+</body>
+</html>
+<!-- 
+    单元格内容的水平对齐方式
+    justify-items: start/end/center/stretch 默认
+    单元格内容的垂直对齐方式
+    align-items: start/end/center/stretch 默认
+
+    单元格内容的对齐方式简写
+    place-items：水平方向 垂直方向,
+                如果水平和垂直只写一个值，默认另一个值为center
+ -->

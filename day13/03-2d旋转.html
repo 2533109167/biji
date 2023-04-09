@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+            transition: 1s;
+        }
+        .father:hover .son {
+            transform: rotate(180deg);
+            /* transform: rotate(-180deg); */
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">文字文字</div>
+    </div>
+</body>
+</html>
+<!-- 
+    2d旋转
+    transform: 
+                rotate(70deg)  + 顺时针 - 逆时针
+                先平移后旋转和先旋转后平移效果不一样，原因是轴的位置不一样
+ -->

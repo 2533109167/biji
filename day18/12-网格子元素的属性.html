@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 700px;
+            height: 500px;
+            border: 3px solid #000;
+            display: grid;
+            grid-template-columns: repeat(7,100px);
+            grid-template-rows: repeat(5,100px);
+        }
+        .son1 {
+            background-color: cyan;
+            grid-area: 2/3/3/4;
+        }
+        .son2 {
+            background-color: pink;
+            grid-area: 3/4/5/7;
+        }
+        .son3 {
+            background-color: yellowgreen;
+            grid-area: 2/4/6/6;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="son1"></div>
+       
+        <div class="son3">asdfasdf</div>
+        <div class="son2">asdf</div>
+</body>
+</html>
+<!-- 
+    网格子元素的属性
+    grid-area:
+                写法一： 写网格名字
+                写法二： 行开始线/列开始线/行结束线/列结束线
+                        上/左/下/右
+ -->

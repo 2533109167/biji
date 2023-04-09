@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+            transition: 1s;
+        }
+        .father:hover .son {
+            /* 元素沿着x缩放2倍 */
+            /* transform: scaleX(2); */
+            /* transform: scaleY(0.5); */
+            /* transform: scaleX(1); */
+            /* transform: scaleX(0); */
+            /* transform: scaleX(-2); */
+            /* transform: scaleX(-0.5); */
+            /* transform: scale(2, 3); */
+            /* x放大2 y缩小2 */
+            /* transform: scale(2, 0.5); */
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">文字文字</div>
+    </div>
+</body>
+</html>
+<!-- 
+    缩放
+    transform: scale(x, y)
+               scaleX()
+               scaleY()
+
+               >1 放大
+               <1 缩小
+               =1 不变
+               =0 消失
+               <0 先翻转后缩放
+
+               如果scale()只写一个值， 意味着x，y同时缩放相同的倍数
+
+               ?想要写10px的文字 ：直接把文字缩小
+ -->

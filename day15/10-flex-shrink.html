@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 600px;
+            border: 3px solid #000;
+            display: flex;
+        }
+        .father div {
+            width: 200px;
+            height: 400px;
+            border: 3px dashed blue;
+            background-color: yellow;
+            box-sizing: border-box;
+            text-align: center;
+
+        }
+        .father div:nth-child(1) {
+            flex-shrink: 0;
+            /* flex-shrink: 1; */
+        }
+        .father div:nth-child(2) {
+            flex-shrink: 0;
+            /* flex-shrink: 2; */
+        }
+        .father div:nth-child(3) {
+            flex-shrink: 0;
+            /* flex-shrink: 3; */
+        }
+        /* ============================ */
+        .father2 {
+            width: 300px;
+            height: 600px;
+            border: 3px solid #000;
+            display: flex;
+        }
+        .father2 div{
+            height: 400px;
+            box-sizing: border-box;
+            border: 3px dashed blue;
+            background-color: pink;
+        }
+        .father2 div:nth-child(1) {
+            width: 100px;
+        }
+        .father2 div:nth-child(2) {
+            width: 200px;
+        }
+        .father2 div:nth-child(3) {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">1</div>
+        <div class="son">2</div>
+        <div class="son">3</div>
+    </div>
+    <div class="father2">
+        <div class="son">1</div>
+        <div class="son">2</div>
+        <div class="son">3</div>
+    </div>
+</body>
+</html>

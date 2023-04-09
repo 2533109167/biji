@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            /* background-color: gray; */
+            position: relative;
+            /* 设置子元素的近大远小 */
+            /* perspective: 1000px; */
+            /* 设置3d场景 */
+            transform-style: preserve-3d;
+            transform: rotateX(-40deg) rotateY(-30deg);
+
+            animation: xuanzhuan 20s linear infinite alternate;
+        }
+        .father .son {
+            width: 400px;
+            height: 400px;
+            font-size: 100px;
+            text-align: center;
+            line-height: 400px;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.5;
+            backface-visibility: hidden;
+        }
+        .father div:nth-child(1) {
+            background-color: blue;
+            transform: translateZ(200px);
+        }
+        .father div:nth-child(2) {
+            background-color: green;
+            transform: translateZ(-200px) rotateY(180deg);
+        }
+        .father div:nth-child(3) {
+            background-color: hotpink;
+            /* 先平移后旋转 轴不变 */
+            transform: translateX(-200px) rotateY(-90deg);
+            /* 先旋转后平移 轴改变 */
+            /* transform: rotateY(-90deg) translateZ(200px); */
+        }
+        .father div:nth-child(4) {
+            background-color: tomato;
+            transform: translateX(200px) rotateY(90deg);
+        }
+        .father div:nth-child(5) {
+            background-color: lawngreen;
+            transform: translateY(200px) rotateX(-90deg);
+        }
+        .father div:nth-child(6){
+            background-color: olive;
+            transform: translateY(-200px) rotateX(90deg);
+        }
+        @keyframes xuanzhuan {
+            from {
+                transform: rotateX(2000deg) rotateY(1000deg);
+            }
+            to {
+                transform: rotateX(-200deg) rotateY(40deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">1</div>
+        <div class="son">2</div>
+        <div class="son">3</div>
+        <div class="son">4</div>
+        <div class="son">5</div>
+        <div class="son">6</div>
+    </div>
+</body>
+</html>

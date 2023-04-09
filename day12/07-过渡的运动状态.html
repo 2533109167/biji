@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            height: 700px;
+            border: 1px solid #000;
+        }
+        .father div {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: pink;
+            transition-duration: 5s;
+        }
+        .father:hover div {
+            width: 1000px;
+        }
+        .father div:nth-child(1) {
+            transition-timing-function: cubic-bezier(1,-0.01,1,-0.01);
+            transition-timing-function: cubic-bezier(0,1.46,.68,1.54);
+        }
+        .father div:nth-child(2) {
+            transition-timing-function: ease;
+        }
+        .father div:nth-child(3) {
+            transition-timing-function: ease-in-out;
+        }
+        .father div:nth-child(4) {
+            transition-timing-function: ease-in;
+        }
+        .father div:nth-child(5) {
+            transition-timing-function: ease-out;
+        }
+        .father div:nth-child(6) {
+            transition-timing-function: linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="box">贝塞尔曲线</div>
+        <!-- <div class="box">normal</div> -->
+        <div class="box">ease</div>
+        <div class="box">ease-in-out</div>
+        <div class="box">ease-in</div>
+        <div class="box">ease-out</div>
+        <div class="box">linear</div>
+    </div>
+</body>
+</html>
+<!-- 
+    过渡的运动状态
+ -->

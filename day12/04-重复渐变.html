@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 300px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 50px;
+            background-image: repeating-linear-gradient( red 5%, blue 15%);
+            /* 第一个颜色的位置表示渐变开始的位置，最后一个颜色的位置表示渐变结束的位置，中间的颜色的百分比要从小到大 */
+            background-image: repeating-linear-gradient( red 5%, blue 15%, yellow 25%);
+        }
+        .box2 {
+            width: 300px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 50px;
+            background-image: repeating-linear-gradient(red 5%, red 10%, blue 10%, blue 20%, yellow 20%, yellow 25%);
+        }
+        .box3 {
+            width: 300px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 50px;
+            background-image: repeating-radial-gradient(red 5%, blue 20%);
+        }
+
+        .box4 {
+            width: 300px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 50px;
+            background-image: repeating-radial-gradient( red 5%, red 10%, yellow 10% , yellow 15%, blue 15%, blue 20%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+</html>
+<!-- 
+    重复线性渐变 
+    background-image: repeating-linear-gradient(方向, 颜色1, 颜色2)
+                !颜色必须添加数值或百分比
+                
+    重复径向渐变
+    background-image: repeating-radial-gradient(方向, 颜色1, 颜色2)
+                !颜色必须添加数值或百分比
+ -->

@@ -1,0 +1,50 @@
+/* 清除内外间距 */
+/* 去掉 b strong 加粗 */
+/* 去掉 i em  倾斜 */
+/* 去掉a u s del 的修饰线 */
+/* 去掉li的项目符号 */
+/* 设置网页的body 字体微软雅黑 字号16 */
+/* 设置版心 宽度 和 居中 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+b, strong {
+    font-weight: normal;
+}
+
+i, em {
+    font-style: normal;
+}
+
+a, u, s , del {
+    text-decoration: none;
+} 
+li {
+    list-style: none;
+}
+body {
+    /* font-size: 16px;
+    font-family: '微软雅黑'; */
+
+    /* font: 倾斜 加粗 字号/行高 字体
+        字号 字体必须写
+        一般不推荐用, 推荐直接写
+    */
+
+    font: 16px '微软雅黑';
+}
+
+/* 去掉图片下方的3-5px的间隙 */
+img {
+    vertical-align: middle;
+}
+.clearfix:after {
+    content:"";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both
+}

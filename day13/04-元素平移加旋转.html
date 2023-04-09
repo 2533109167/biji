@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+            transition: 5s;
+        }
+        .father:hover .son {
+            /* 相同的属性以下面的为准 */
+            /* transform: translate(300px);
+            transform: rotate(50deg); */
+
+            /* 先平移后旋转 */
+            transform: translate(300px) rotate(720deg);
+
+            /* 先旋转后平移 */
+            /* transform: rotate(720deg) translate(300px); */
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">文字文字</div>
+    </div>
+</body>
+</html>
+<!-- 
+    先平移后旋转和先旋转后平移效果不一样，原因是轴的位置不一样
+ -->

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 同级中的第三个，并且是li */
+        /* li:nth-child(3) {
+            background-color: yellow;
+        } */
+
+        li:nth-of-type(3) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>里面的li1</li>
+        <li>里面的li2</li>
+        <li>里面的li3</li>
+        <li>里面的li4</li>
+    </ul>
+    <li>外面的li1</li>
+    <li>外面的li2</li>
+    <li>外面的li3</li>
+    <ul>
+        <li>里面的li1</li>
+        <li>里面的li2</li>
+        <li>里面的li3</li>
+        <li>里面的li4</li>
+    </ul>
+</body>
+</html>
+<!-- 
+    结构伪类选择器
+
+    E:nth-of-type(n) 同级中同类型的第n元素，并且这个元素是E
+    E:nth-child(n)   同级中第n个元素，并且这个元素是E
+ -->

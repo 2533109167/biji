@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 142px;
+            height: 174px;
+            background-color: cyan;
+            margin: 50px auto;
+            transition: 1s;
+        }
+        .left,.right {
+            width: 100px;
+            height: 150px;
+            background-color: red;
+            float: left;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        .left {
+            transform: rotate(-45deg);
+        }
+        .right {
+            transform: rotate(45deg);
+            margin-left: -64px;
+        }
+        .father:hover {
+            transform: scale(1.5);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

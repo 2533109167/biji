@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 头部 */
+header {
+    /* height: 44px; */
+    height: 0.88rem;
+    background-color: #ff7138;
+    /* padding: 0 14px; */
+    padding: 0 0.28rem;
+    display: flex;
+    align-items: center;
+}
+
+header .search {
+    /* height: 30px; */
+    height: 0.6rem;
+    width: 100%;
+    background-color: #fff;
+    /* border-radius: 15px; */
+    border-radius: 0.3rem;
+    /* text-align: center; */
+    /* line-height: 30px; */
+    /* line-height: 0.6rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .search .icon-sousuo {
+    /* font-size: 14px; */
+    font-size: 0.28rem;
+    /* margin-right: 6px; */
+    margin-right: 0.12rem;
+}
+
+header .search span {
+    /* font-size: 14px; */
+    font-size: 0.28rem;
+}
+
+/* 主体 */
+main {
+    /* flex: 1; */
+    /* 
+        ! flex: 1  1 0
+
+        flex:1 里面有一个属性flex-basis: 0
+        flex-basis:0 会忽略元素在主轴上的空间的属性，在这里指的是高度
+        有个flex-basis, 高度不会生效
+    */
+    /* height: calc(100% - 44px - 48px); */
+    height: calc(100% - 0.88rem - 0.96rem);
+    display: flex;
+}
+
+main .left {
+    height: 100%;
+    background-color: #f6f6f6;
+    /* width: 90px; */
+    width: 1.8rem;
+    overflow: auto;
+}
+
+main .left li {
+    /* height: 48px; */
+    height: 0.96rem;
+    text-align: center;
+    /* font-size: 14px; */
+    font-size: 0.28rem;
+    /* line-height: 48px; */
+    line-height: 0.96rem;
+}
+
+main .left .hot {
+    background-color: #fff;
+    color: #ff7138;
+    position: relative;
+}
+
+main .left .hot::before {
+    content: '';
+    display: block;
+    /* width: 4px; */
+    width: 0.08rem;
+    /* height: 4px; */
+    height: 0.08rem;
+    background-color: #ff7138;
+    border-radius: 50%;
+    position: absolute;
+    /* left: 5px; */
+    left: 0.1rem;
+    /* top: 20px; */
+    top: 0.4rem;
+}
+
+main .right {
+    height: 100%;
+    flex: 1;
+    overflow: auto;
+}
+
+main .right h2 {
+    /* font-size: 12px; */
+    font-size: 0.24rem;
+    /* margin-top: 26px; */
+    margin-top: 0.52rem;
+    /* margin-left: 24px; */
+    margin-left: 0.48rem;
+    /* margin-bottom: 36px; */
+    margin-bottom: 0.72rem;
+}
+
+main .preferred-list .img-box {
+    width: 33.3%;
+    text-align: center;
+    /* margin-bottom: 40px; */
+    margin-bottom: 0.8rem;
+}
+
+main .preferred-list img {
+    /* width: 61px; */
+    width: 1.22rem;
+    margin: 0 auto;
+}
+
+main .preferred-list h4 {
+    /* font-size: 12px; */
+    font-size: 0.24rem;
+    /* line-height: 25px; */
+    line-height: 0.5rem;
+}
+
+main .preferred-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 底部 */
+footer {
+    /* height: 48px; */
+    height: 0.96rem;
+    display: flex;
+}
+
+footer a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 0.32rem;
+}
+
+/* ip6 */
+html {
+    /* font-size: 50px; */
+    font-size: 13.333vw;
+}

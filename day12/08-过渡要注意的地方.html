@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        img {
+            display: block;
+        }
+        ul {
+            width: 1200px;
+            margin: 100px auto;
+        }
+        li {
+            width: 200px;
+            height: 150px;
+            border: 1px solid #ccc;
+            background: #eeeeee;
+            padding: 7px;
+            float: left;
+            margin: 5px;
+        }
+
+        img {
+            /* img 200*150 */
+            border: 1px solid #aaaaaa;
+            padding: 2px;
+            width: 194px;
+            height: 144px;
+            background-color: #fff;
+            transition: 3s;
+            /* 如果一个属性默认值是auto, 过渡之后变成一个数值,需要这个属性设置一个数值类型的起始值 */
+            top: 0px;
+            left: 0px;
+        }
+
+        li:hover img {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            top: -20px;
+            left: -40px;  
+        }
+
+        /* 
+            1. li 必须设置宽高
+            2. 相对定位必须写在hover中
+        */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/photo01.jpg" alt="">
+        </li>
+    </ul>
+</body>
+</html>

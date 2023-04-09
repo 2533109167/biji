@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!-- 
+    2d变换
+    transform:
+                平移
+                translate(x,y)
+                translateX()
+                translateY()
+                            数值
+                            百分比  参考元素自身的宽高（元素水平垂直居中）
+
+                旋转
+                rotate() 40deg
+
+                缩放
+                scale(x, y) 倍数 1 2 3 
+                scaleX()
+                scaleY()
+                        >1 放大
+                        =1 不变
+                        <1 缩小
+                        =0 消失
+                        <0 翻转后缩放
+
+                x放大2倍，y缩小2倍
+                scale(2, 0.5)
+
+                倾斜
+                skew(x, y) 角度
+                skewX()
+                skewY()
+
+        动画
+
+        定义关键帧
+        @keyframes 动画名字{
+            from{}
+            to {}
+        }
+        @keyframes 动画名字{
+            0%{}
+            100%{}
+        }
+
+        animation-name 绑定动画名字     必写
+        animation-duration 动画持续时间   必写
+        animation-delay  动画延迟时间
+        animation-iteration-count 动画执行次数 
+                        数字   1默认 2 3 4
+                        infinite  无数次
+
+        animation-direction 动画的方向
+                            normal 默认 正向
+                            reverse 反向
+                            alternate 先正后反  执行次数>=2
+                            alternate-reverse 先反后正  执行次数>=2
+
+        animation-timing-function 动画的运动状态
+                                ease 默认  先快后慢
+                                ease-in 
+                                ease-out
+                                ease-in-out 慢速开始 慢速结束
+                                linear 匀速
+                                贝塞尔曲线
+
+                                跳帧动画
+                                step-start 帧和帧之间跳一次，跳过第一帧  steps(1,start)
+                                step-end   帧和帧之间跳一次，跳过最后一帧 steps(1, end)
+                                steps(次数, end 默认/start)
+        
+        animation-play-state 动画的执行状态
+                             running 运动 默认
+                             paused 暂停
+                             
+        animation 简写
+            - 名字和持续时间必写
+            - 持续时间和延迟时间有先后，持续时间在前
+            - 持续时间和延迟时间必须写单位 0s
+            - 名字区分大小写，避免关键字
+
+        animation: running 3s infinite
+
+
+ -->

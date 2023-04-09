@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 600px;
+            height: 500px;
+            border: 3px solid #000;
+            margin: 100px auto;
+            display: grid;
+            grid-template-columns: 100px auto 100px;
+            grid-template-rows: 200px auto 200px;
+            /*设置间距 */
+            row-gap: 20px;
+            column-gap: 30px;
+            /* 设置网格的排列顺序 */
+            grid-auto-flow: column;
+        }
+        .father div:nth-child(1) {
+            background-color: yellow;
+        }
+        .father div:nth-child(2) {
+            background-color: green;
+        }
+        .father div:nth-child(3) {
+            background-color: cyan;
+        }
+        .father div:nth-child(4) {
+            background-color: pink;
+        }
+        .father div:nth-child(5) {
+            background-color: blue;
+        }
+        .father div:nth-child(6) {
+            background-color: peru;
+        }
+        .father div:nth-child(7) {
+            background-color: aliceblue;
+        }
+        .father div:nth-child(8) {
+            background-color: lime;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+</body>
+</html>

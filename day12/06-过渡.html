@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 400px;
+            background-color: pink;
+
+            /* 要发生过渡的css属性 */
+            /* transition-property: width, background-color, height; */
+            /* transition-property: all; */
+            /* 过渡的时间
+                !时间必须写
+            */
+            /* transition-duration: 2s; */
+            /* 过渡的延时 */
+            /* transition-delay: 2s; */
+            transition: 2s 2s ease;
+        }
+        .box:hover {
+            width: 600px;
+            background-color: yellow;
+            height: 200px;
+
+            /* 写在hover中，过渡只有鼠标移入才有效，一般情况写在元素的默认状态中 */
+            /* transition-duration: 2s, 4s, 6s; */
+        }
+        .box2 {
+            width: 400px;
+            height: 500px;
+            margin: 50px;
+            background-color: green;
+        }
+        .box2 .son {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            transition-duration: 1s;
+        }
+        /* 鼠标放到box2 son消失
+        */
+        .box2:hover .son {
+            /* display 是一个极端值，只有消失出现两个状态，不能过渡 */
+            /* display: none; */
+            /* visibility 是一个极端值 只有消失出现两个状态，不能过渡 */
+            /* visibility: hidden; */
+
+            /* *只有有中间值的属性才可以发生过渡 */
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2">
+        <div class="son"></div>
+    </div>
+</body>
+</html>
+<!-- 
+    过渡
+    transition
+                transition-property 要发生过渡的属性
+                                    默认  all
+                transition-duration  过渡的时间
+                                        s  ms  1s =1000ms
+                                        !过渡时间必须写
+
+                transition-delay  过渡的延迟时间
+                                        s ms
+
+                transition-timing-function 过渡的运动状态
+                                    linear  匀速
+                                    ease    先快后慢  默认
+                                    ease-in 加速
+                                    ease-out 减速
+                                    ease-in-out  慢速开始 慢速结束
+                                    贝塞尔曲线
+
+    过渡简写
+    transition: transition-property transition-duration transition-delay transition-timing-function
+                - 属性顺序不强调, 持续时间和延时时间有先后顺序,持续时间在前
+                - 持续时间必须写
+ -->

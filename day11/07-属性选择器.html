@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选择具有title属性的元素 */
+        /* [title] {
+            border: 5px solid #000;
+        } */
+
+        /* 选择具有title属性的元素img */
+        /* img[title] {
+            border: 5px solid #000;
+        } */
+
+        /* 选择有title属性，并且属性值是dog的元素img */
+        /* img[title='dog'] {
+            width: 50px;
+        } */
+
+        /* 选择具有title属性，并且属性值以dog结尾的元素img */
+        /* img[title$='dog'] {
+            width: 50px;
+        } */
+
+        /* 选择具有title属性，并且属性值以dog开头的元素img */
+        /* img[title^='dog'] {
+            width: 50px;
+        } */
+
+        /* 选择具有title属性，并且属性值有dog的元素img */
+        img[title*='dog'] {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/img001.jpg" alt="" title="dog">
+    <img src="./img/img001.jpg" alt="" title="wangwdog ang ">
+    <img src="./img/img001.jpg" alt="" title="wang dog wang">
+    <img src="./img/img001.jpg" alt="" title="dog-wangwang">
+    <a href="" title="">文字文字文字</a>
+</body>
+</html>
+<!-- 
+    属性选择器
+
+    css2
+    E[attr]  选择有attr属性的元素E
+    E[attr='val'] 选择具有attr属性，并且属性值是val的元素E
+
+    css3
+    E[attr$='val'] 选择具有attr属性，并且属性值以val结尾的元素E
+    E[attr^='val'] 选择具有attr属性，并且属性值以val开头的元素E
+    E[attr*='val'] 选择具有attr属性，并且属性值中有val的元素E
+ -->

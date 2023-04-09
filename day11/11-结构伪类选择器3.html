@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 同级中的第二个元素，并且这个元素是li */
+        /* li:nth-child(2) {
+            background-color: pink;
+        } */
+
+        /* 同级中同类型的第2个，并且这个元素是li */
+        /* li:nth-of-type(2) {
+            background-color: pink;
+        } */
+
+        /* 同级中倒数第2个元素，并且这个元素是li */
+        /* li:nth-last-child(2) {
+            background-color: pink;
+        } */
+
+        /* li:nth-last-of-type(2) {
+            background-color: pink;
+        } */
+
+
+        /* li:first-child {
+            background-color: yellow;
+        } */
+
+        /* li:first-of-type {
+            background-color: yellow;
+        } */
+
+        /* li:last-child {
+            background-color: pink;
+        }
+         */
+
+         li:last-of-type {
+             background-color: pink;
+         }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>里面的li1</li>
+        <p>ppppppppppp</p>
+        <p>ppppppppppp</p>
+        <li>里面的li2</li>
+        <p>ppppppppppp</p>
+        <ul>
+            <p>pppppppppppp</p>
+            <li>最里面的li1</li>
+            <li>最里面的li2</li>
+        </ul>
+    </ul>
+    <li>外面的li1</li>
+    <li>外面的li2</li>
+</body>
+</html>
+<!-- 
+    结构伪类选择器
+
+    E:nth-of-type(n) 同级中同类型的第n元素，并且这个元素是E
+    E:nth-child(n)   同级中第n个元素，并且这个元素是E
+
+    E:nth-last-of-type(n) 同级中同类型的倒数第n个元素，并且这个元素是E
+    E:nth-last-child(n) 同级中倒数第n个元素，并且这个元素是E
+
+    E:first-of-type 同级中同类型的第一个元素，并且这个元素是E
+                    E:nth-of-type(1)
+    E:first-child  同级中第一个元素，并且这个元素是E
+                    E:nth-child(1)
+
+    E:last-of-type 同级中同类型最后一个元素，并且该元素是E
+                    E:nth-last-of-type(1)
+    E:last-child   同级中最后一个元素，并且该元素是E
+                    E:nth-last-child(1)
+ -->

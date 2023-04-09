@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin: 100px auto;
+            perspective: 1000px;
+            perspective-origin: 50px 100px;
+            perspective: 1000px;
+        }
+        .son {
+            /* width: 300px; */
+            width: 100px;
+            height: 200px;
+            background-color: green;
+            transition: 2s;
+        }
+        .father:hover .son {
+            /* 近大远小：  */
+            transform: translateZ(200px);
+            /* transform: translateZ(-200px); */
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>
+<!-- 
+    3d变换
+    transform:
+                平移 
+                    translateZ()  + 向前  - 向后
+                    translate3d(x, y, z)
+                旋转 
+                    rotateX() + 上面向里转，下面向外转
+                    rotateY() + 右面向里转，左面向外转
+
+                    rotate3d(x, y, z, 90deg)
+                            x y z 数值范围0-1
+
+                    rotate3d(1,0,1,90deg) x轴转90deg z轴转90deg
+                    xyz 没有1的时候，被视为1，只有其中一个数值为的1的时候，小数才能生效
+
+                    *rotateZ() 是平面的旋转 rotate() === rotateZ()
+                    
+                缩放
+                    scaleZ() 
+                    scale3d(x, y, z)
+                    单独使用scalez, scale3d没有任何效果，必须结合其他变形一起使用才能有效，而且要放到其他变形后面
+
+    景深： 场景深度，给元素设置近大远小的效果
+    要求给父元素或祖先元素设置
+    perspective: 900px-1200px
+        景深越大，效果越不明显 
+        景深越小，效果越明显
+
+    景深原点
+    perspective-origin: 水平   垂直
+                数值
+               百分比   百分比参考元素的宽高
+                方位词 left right center  top bottom center
+
+    !有景深才能有景深原点，景深原点就是一个视觉观察的中心点
+
+    3d场景
+    transform-style:
+                    flat 默认 平面
+                    preserve-3d 3d场景
+
+    元素背对用户是否可见
+    backface-visibility: 
+                        hidden 隐藏
+                        visible 可见 默认
+
+    变形原点
+    transform-origin: 
+                    x   y   z
+
+                    x y ： 数值 百分比 方位词
+                    z:    数值
+ -->

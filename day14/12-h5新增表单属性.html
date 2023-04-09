@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="" id="form1">
+        <p>
+            autofocus: <input type="text" autofocus>
+        </p>
+        <p>
+            required： <input type="text" required>
+        </p>
+        <p>
+            autocomplete: <input type="text" name="web-2208">
+        </p>
+        <p>
+            pattern: <input type="text" pattern="^(?:(?:\+|00)86)?1[3-9]\d{9}$">
+        </p>
+        <p>
+            multiple: <select name="" id="" multiple>
+                <option value="">北京</option>
+                <option value="">上海</option>
+                <option value="">重庆</option>
+                <option value="">广州</option>
+            </select>
+        </p>
+        <p>
+            multiple: <input type="file" multiple>
+        </p>
+        <p>
+            datalist: <input type="text" list="datalist">
+                      <datalist id="datalist">
+                          <option value="apple" label="apple"></option>
+                          <option value="orange" label="orange"></option>
+                          <option value="banana" label="banana"></option>
+                      </datalist>
+        </p>
+        <p>
+            <button type="submit">提交</button>
+        </p>
+    </form>
+    <input type="text" name="book" form="form1">
+</body>
+</html>
+<!-- 
+    h5新增表单属性
+    autofocus: 自动获取焦点  一个页面只能有一个autofocus
+    required: 必填
+    autocomplete: 自动补全 自动提示功能
+                    on 打开
+                    off 关闭
+                    - 表单控件必须设置name属性
+                    - 表单控件必须提交过
+
+    pattern: 正则表达式校验
+         ^(?:(?:\+|00)86)?1[3-9]\d{9}$
+    multiple: 多选 用于下拉 文件上传
+
+    list: 和datalist的id名字绑定，做到输入框的提示信息列表
+        datalist
+            option 
+                    value
+                    label
+
+    form: 和form标签的id名字绑定，可以做到在表单域外的表单控件也可以提交数据
+ -->

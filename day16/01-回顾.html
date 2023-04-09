@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!-- 
+    怪异盒模型 IE盒模型
+    box-sizing: border-box
+
+    元素的宽高的计算方式不同
+    元素的总宽度 = width(content-width + 左右padding + 左右border) + 左右margin
+
+
+    标准盒模型
+    box-sizing: content-box
+    元素的总宽度 = width + 左右padding + 左右border + 左右margin
+
+    弹性盒
+
+    - 弹性盒 容器 项目  主轴 侧轴
+    - 弹性盒只会影响子元素的属性
+    - 弹性盒里面的子元素， clear float vertical-align 失效
+
+    父元素的属性
+    1. display: flex/inline-flex
+    2. 元素在主轴上是否换行
+        flex-wrap: nowrap 不换行
+                   wrap 
+                   wrap-reverse 
+    3. 主轴的方向
+        flex-direction： 
+                    row
+                    row-reverse
+                    column
+                    column-reverse
+
+    4. 项目在主轴的对齐方式
+        justify-content: 
+                        flex-start
+                        flex-end
+                        center
+                        space-around
+                        space-between
+                        space-evenly
+
+    5. 项目在侧轴的对齐方式
+        align-items:
+                    flex-start
+                    flex-end
+                    center
+                    stretch 拉伸 默认
+                    baseline
+    6. 多行项目在侧轴的对齐方式
+        align-content:
+                    flex-start
+                    flex-end
+                    center
+                    stretch
+                    space-between 
+                    space-around
+
+    7. flex-flow: flex-wrap flex-direction
+
+    子元素的属性
+   1.  align-self 单个元素在侧轴的对齐方式
+            auto 继承父元素的align-items的属性，如果父元素没有，会找align-items的默认stretch 拉伸
+            flex-start
+            flex-end
+            center
+            stretch
+            baseline
+
+    2. flex-grow 元素在主轴的扩展比例
+            0 1 2 3 
+            0 默认 不分配空间 不扩展
+            
+    3. flex-shrink 元素在主轴的收缩比例
+            0 1 2 3
+            1 默认 收缩
+
+    4. flex-basis 元素在主轴的基准值
+                    auto 默认 参考元素在主轴上占据空间的属性（主轴水平=== 宽度，主轴垂直 === 高度）
+                    数值
+                    百分比
+    5. flex: flex-grow flex-shrink flex-basis
+    flex:1   1          1              0            ==> 平分空间
+        ?如果flex:1 给每个项目都设置了，那么表示平分空间
+        ?如果flex:1 只给一个子项设置，那么表示占据剩余空间
+
+    flex:auto   1        1              auto        ===> 等比例缩放
+    flex:none   0        0              auto
+ -->
+ <!-- 
+    多列
+    1. column-count 设置分为几列
+    2. column-width 设置每列的宽度
+    3. column-gap    列和列之间的间隙
+    4. column-rule  列和列的分隔线
+    5. column-span   是否横跨所有列
+                        none
+                        all
+    6. column-fill  列的高度是否统一
+                        balance 高度统一
+                        auto  自适应
+  -->

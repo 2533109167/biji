@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!-- 
+    移动端适配方案
+    - rem + 媒体查询
+        利用媒体查询设置html的font-size的大小
+    - rem + vw
+        vw本身是一个相对单位，vw可以根据屏幕自动调整大小，html的font-size设置vw单位，
+
+        375px === 100vw
+        50px  ==== 50*100/375
+
+    - rem + js
+        动态监听屏幕的宽度，动态设置html的font-size大小
+        设计图量的数据/100+rem
+
+        设计图 300px*150px   3rem*1.5rem
+
+    边框1px的
+    设计师希望在手机上看到物理像素1px的边框
+
+    dpr = 物理/逻辑  === 2
+            1/0.5
+
+    - 阴影
+    - 渐变
+    - 边框用1px的元素替代，缩放到原来的0.5  
+        div{ height: 1px; transform: scaleY(0.5)}
+    - 调整缩放比例
+
+ -->
+
+ 

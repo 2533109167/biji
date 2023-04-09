@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 600px;
+            height: 500px;
+            border: 3px solid #000;
+            margin: 100px auto;
+            /* 设置元素为网格布局，该元素是网格容器 */
+            display: grid;
+            /* 设置网格的列 */
+            /* grid-template-columns: 30px 50px 70px; */
+            /* grid-template-columns: repeat(3, 50px) 100px; */
+            /* grid-template-columns: repeat(auto-fill, 50px) */
+            /* grid-template-columns: 100px 200px minmax(200px, 400px); */
+            /* grid-template-columns: 100px auto 200px; */
+            grid-template-columns: 100px 1fr 2fr;
+            /* 设置网格的行 */
+            /* grid-template-rows: 20px 40px; */
+        }
+        .father div:nth-child(1) {
+            background-color: yellow;
+        }
+        .father div:nth-child(2) {
+            background-color: green;
+        }
+        .father div:nth-child(3) {
+            background-color: cyan;
+        }
+        .father div:nth-child(4) {
+            background-color: pink;
+        }
+        .father div:nth-child(5) {
+            background-color: blue;
+        }
+        .father div:nth-child(6) {
+            background-color: peru;
+        }
+        .father div:nth-child(7) {
+            background-color: aliceblue;
+        }
+        .father div:nth-child(8) {
+            background-color: lime;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+    </div>
+</body>
+</html>
+<!-- 
+    网格布局
+    display: grid/inline-grid
+
+    设置列 设置有几列 设置每列的宽度
+    grid-template-columns：
+                    - 有几个值，就表示有几列
+                    grid-template-columns: 20px 30px 40px
+                                        数值
+                                        百分比
+                                        repeat(次数, 模式) 
+                                                repeat(2, 30px)
+                                                repeat(3, 20px 30px)
+
+                                                次数 auto-fill 自动填充，
+                                        minmax() 最大最小值
+                                        auto  自适应
+                                        fr   倍数关系
+    设置行
+    grid-template-rows
+
+    设置行的间距和列的间距
+    column-gap 
+    row-gap
+
+    设置网格元素的排列顺序
+    grid-auto-flow: column/row
+
+    单元格内容的水平对齐方式
+    justify-items: start/end/center/stretch 默认
+    单元格内容的垂直对齐方式
+    align-items: start/end/center/stretch 默认
+
+    单元格内容的对齐方式简写
+    place-items：水平方向 垂直方向,
+                如果水平和垂直只写一个值，默认另一个值为center
+
+    单元格整体的水平对齐方式
+    justify-content: start/end/center/stretch（默认）
+                     space-between
+                     space-around
+                     space-evenly
+
+    单元格整体的垂直对齐方式
+    align-content: start/end/center/stretch 默认
+                    space-between
+                    space-around
+                    space-evenly
+
+    单元格整体的对齐方式的简写
+    place-content: 水平 垂直
+
+    父元素设置单元格名字
+    grid-template-areas: 'a . c'
+                         'd e f'
+                         'h i j'
+
+                        . 表示不占位
+
+    网格子元素的属性
+    设置子元素去到哪个单元格
+    
+    grid-area: f
+    grid-area:
+                写法一： 写网格名字
+                写法二： 行开始线/列开始线/行结束线/列结束线
+                        上/左/下/右
+ -->

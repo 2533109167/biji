@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin: 50px auto;
+        }
+        .son {
+            width: 200px;
+            height: 100px;
+            background-color: cyan;
+            transition: 1s;
+        }
+        .father:hover .son {
+            /* 元素和y轴夹角30度 */
+            transform: skewX(30deg);
+            /* 元素和x轴夹角30 */
+            transform: skewY(30deg);
+
+            transform: skew(30deg, 30deg);
+
+            transform: skew(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">文字文字</div>
+    </div>
+</body>
+</html>
+<!-- 
+    倾斜
+    transform: skew(x, y) 30deg
+               skewX()
+               skewY()
+
+               如果skew()只写一个值，表示skewX() 
+ -->

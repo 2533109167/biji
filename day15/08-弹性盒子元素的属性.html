@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 700px;
+            height: 400px;
+            border: 3px solid #000;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .son {
+            width: 100px;
+            box-sizing: border-box;
+            border: 3px dashed blue;
+            text-align: center;
+        }
+
+        .father div:nth-child(1) {
+            align-self: stretch;
+        }
+
+        .father div:nth-child(2) {
+            align-self: flex-start;
+        }
+
+        .father div:nth-child(3) {
+            align-self: center;
+        }
+
+        .father div:nth-child(4) {
+            align-self: flex-end;
+        }
+
+        .father div:nth-child(5) {
+            font-size: 40px;
+            align-self: baseline;
+        }
+
+        .father div:nth-child(6) {
+            font-size: 50px;
+            align-self: baseline;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box2 span {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        .box2 span:nth-child(2) {
+            align-self: flex-end;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box3 span {
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            border-radius: 50%;
+        }
+        .box3 span:nth-child(2) {
+            align-self: center;
+        }
+        .box3 span:nth-child(3) {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">1</div>
+        <div class="son">2</div>
+        <div class="son">3</div>
+        <div class="son">4</div>
+        <div class="son">5</div>
+        <div class="son">6</div>
+    </div>
+    <!-- 
+        ! 元素写了宽高看不到
+            - 元素类型是什么
+            - 宽高写了有没有单位
+            - 高度如果写了百分比，父元素有没有高度
+            - 元素有没有背景色
+
+        ! display: flex 必须写 给父元素加
+          父元素的属性 子元素的属性分清楚
+     -->
+    <div class="box2">
+        <span></span>
+        <span></span>
+    </div>
+    <div class="box3">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+
+</html>
+<!-- 
+    弹性盒子元素的属性
+    1. align-self: 元素自身在侧轴的对齐方式
+                    auto  默认值 继承父元素的align-items的属性值，如果父元素没有align-items, 就会找align-items的默认值
+                    stretch 拉伸
+                    flex-start
+                    center
+                    flex-end
+                    baseline
+
+    2. flex-grow 元素在主轴上的扩展比例 
+                    !要求： 主轴上必须有剩余空间
+
+                   0 1 2 3 4
+                   默认 0 不分配空间 不扩展
+
+    3. flex-shrink 元素在主轴上的收缩比例
+                    !要求： 容器的宽度必须小于项目的总宽 （主轴是水平方向）
+
+                    0 1 2 3 4 5 
+                    默认 1 收缩
+                         0 不收缩
+
+    4. flex-basis 元素在主轴上的基准值
+                项目在主轴上如果没有设置flex-basis, 会参考width, 如果width没有，由内容撑开
+
+                auto 默认 项目参考width,如果width没有，由内容撑开
+                数值
+                百分比 参考父元素的值
+
+    5. flex: 
+            flex-grow flex-shrink flex-basis
+            1        0      20px
+
+        平分空间
+        flex:1
+                flex-grow: 1
+                flex-shrink: 1
+                flex-basis: 0
+
+        成比例进行缩放
+        flex: auto
+                flex-grow: 1
+                flex-shrink: 1
+                flex-basis: auto
+
+        flex: none
+                flex-grow: 0
+                flex-shrink: 0
+                flex-basis: auto
+ -->

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+        }
+        li {
+            list-style: none;
+        }
+        ul {
+            width: 1200px;
+            height: 100px;
+            margin: 100px auto;
+            /* 确定div的定位的位置，让div参考ul定位 */
+            position: relative;
+        }
+        li {
+            width: 200px;
+            height: 100px;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+            float: left;
+            /* 调整层级 */
+            position: relative;
+            z-index: 2;
+            background-color: #000;
+        }
+        div {
+            width: 100px;
+            height: 150px;
+            background-color: pink;
+            position: absolute;
+            left: 50px;
+            top: -25px;
+            transition: 0.5s;
+           
+        }
+        .li2:hover ~ div {
+            left: 250px;
+        }
+        .li3:hover ~ div {
+            left: 450px;
+        }
+        .li4:hover ~ div {
+            left: 650px;
+        }
+        .li5:hover ~ div {
+            left: 850px;
+        }
+        .li6:hover ~ div {
+            left: 1050px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="li1">1</li>
+        <li class="li2">2</li>
+        <li class="li3">3</li>
+        <li class="li4">4</li>
+        <li class="li5">5</li>
+        <li class="li6">6</li>
+        <div></div>
+    </ul>
+</body>
+</html>
+<!-- 
+    1. 不保存 
+    2. * {
+        margin: 0;
+        padding: 0;
+    }
+    3. 定位
+ -->

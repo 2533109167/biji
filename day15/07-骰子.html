@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box1 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1 span {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border-radius: 50%;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+        .box2 p:nth-of-type(1) {
+            height: 40px;
+            width: 100%;
+            background-color: yellow;
+        }
+        .box2 p:nth-of-type(2) {
+            height: 40px;
+            width: 100%;
+            background-color: blue;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .box2 span {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border-radius: 50%;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .box3 p {
+            width: 100%;
+            height: 40px;
+        }
+        .box3 p:nth-of-type(1) {
+            background-color: yellow;
+        }
+        .box3 p:nth-of-type(2) {
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+        }
+        .box3 p:nth-of-type(3) {
+            background-color: green;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .box3 span {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border-radius: 50%;
+        }
+        .box4 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .box4 p{
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box4 p:nth-of-type(1) {
+            background-color: blue;
+        }
+        .box4 p:nth-of-type(2) {
+            background-color: yellow;
+        }
+        .box4 span {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border-radius: 50%;
+        }
+        .box4-1 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box4-1 p {
+            width: 40px;
+            height: 100%;
+        }
+        .box4-1 p:nth-of-type(1) {
+            background-color: blue;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+        .box4-1 p:nth-of-type(2) {
+            background-color: yellow;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .box4-1 span {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <span></span>
+    </div>
+    <div class="box2">
+        <p>
+            <span></span>
+        </p>
+        <p>
+            <span></span>
+
+        </p>
+    </div>
+    <div class="box3">
+        <p>
+            <span></span>
+        </p>
+        <p>
+            <span></span>
+        </p>
+        <p>
+            <span></span>
+        </p>
+    </div>
+    <div class="box4">
+        <p>
+            <span></span>
+            <span></span>
+        </p>
+        <p>
+            <span></span>
+            <span></span>
+        </p>
+    </div>
+    <div class="box4-1">
+        <p>
+            <span></span>
+            <span></span>
+        </p>
+        <p>
+            <span></span>
+            <span></span>
+        </p>
+    </div>
+</body>
+</html>

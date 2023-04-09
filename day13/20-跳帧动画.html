@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            float: left;
+            background-color: pink;
+        }
+        ul {
+            height: 105px;
+        }
+        div {
+            background-color: cyan;
+        }
+        div,li {
+            width: 98px;
+            height: 98px;
+            border: 1px solid #000;
+        }
+        .normal {
+            animation: move linear 5s;
+        }
+        @keyframes move {
+            
+            0% {
+                transform: translate(100px);
+            }
+            20% {
+                transform: translate(200px);
+            }
+            40% {
+                transform: translate(300px);
+            }
+            60% {
+                transform: translate(400px);
+            }
+            80% {
+                transform: translate(500px);
+            }
+            100% {
+                transform: translate(600px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        normal
+    </p>
+    <div class="normal"></div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <p>
+        step-start
+    </p>
+    <div class="box1"></div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <p>
+        step-end
+    </p>
+    <div class="box1"></div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <p>
+        steps
+    </p>
+    <div class="box1"></div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

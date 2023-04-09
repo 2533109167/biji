@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 500px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 50px;
+            background-image: radial-gradient(red, blue);
+        }
+        .box2 {
+            width: 500px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 50px;
+            background-image: radial-gradient(circle, red, blue)
+        }
+        .box3 {
+            width: 500px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 50px;
+            background-image: radial-gradient(circle at 400px 298px,red,blue);
+            background-image: radial-gradient(circle at 500px -30px,red,blue);
+            background-image: radial-gradient(circle at 100% 100%,red,blue);
+            background-image: radial-gradient(circle at right top,red,blue);
+            background-image: radial-gradient(circle at 10px bottom,red,blue);
+            background-image: radial-gradient(circle at  bottom,red,blue);
+        }
+        .box4 {
+            width: 500px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 50px;
+            background-image: radial-gradient(circle closest-side at 400px 280px, 
+                                                red, blue
+            );
+            background-image: radial-gradient(circle closest-corner at 400px 280px, 
+                                                red, blue
+            );
+            background-image: radial-gradient(circle farthest-side at 400px 280px, 
+                                                red, blue
+            );
+            background-image: radial-gradient(circle farthest-corner at 400px 280px, 
+                                                red, blue
+            );
+        }
+        .box5 {
+            width: 500px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 50px;
+            background-image: radial-gradient(red 70%, blue); 
+            background-image: radial-gradient(red 70%, blue 70%); 
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+</body>
+</html>
+<!-- 
+    径向渐变
+    background-image: radial-gradient(方向, 颜色1, 颜色2...)
+                        方向
+                            shape size at position
+
+                            shape 渐变的形状
+                                    默认 椭圆形 ellipse
+                                         圆形 circle
+
+                            at position 渐变中心点的位置
+                                            水平              垂直
+                                数值
+                                百分比   参考元素的宽高的百分比
+                                方位词   left right center   top bottom center
+
+                                如果位置只有方位词，顺序可以换
+                                如果只写一个值，默认另一个方向为center
+
+                            size  渐变半径的大小
+                                    最远角
+                                        farthest-corner  默认
+                                    最远边
+                                        farthest-side
+                                    最近角
+                                        closest-corner
+                                    最近边
+                                        closest-side
+
+ -->

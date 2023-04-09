@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+            transition: 1s;
+            /* 变形原点应该写在元素的默认状态中 */
+            /* transform-origin: 0 0; */
+            /* transform-origin: 100% 100%; */
+            /* transform-origin: -100% center; */
+            /* transform-origin: bottom left; */
+            transform-origin: bottom left;
+        }
+        .father:hover .son {
+          
+            transform: rotate(60deg);
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">文字文字</div>
+    </div>
+</body>
+</html>
+<!-- 
+    变形原点
+    transform-origin:    水平   垂直
+                数值
+                百分比   百分比参考元素的宽高
+                方位词  left right center   top bottom center
+ -->
